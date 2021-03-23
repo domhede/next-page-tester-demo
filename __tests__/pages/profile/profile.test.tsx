@@ -37,12 +37,4 @@ describe('Profile page', () => {
     render();
     await waitFor(() => expect(screen.queryByText('Art Vandalay')).toBeTruthy());
   });
-  it('renders profile page', async () => {
-    const { render } = await getPage({
-      route: '/profile',
-    });
-    render();
-
-    await waitFor(() => expect(screen.queryByText('Art Vandalay')).toBeTruthy());
-  });
 });
