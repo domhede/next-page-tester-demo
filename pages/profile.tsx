@@ -1,20 +1,13 @@
-import Head from 'next/head';
-import { Box, Button, Flex, Circle, Spacer, HStack, Heading } from '@chakra-ui/react';
+import { Box, Circle, HStack, Heading } from '@chakra-ui/react';
 import React from 'react';
 import { gql } from '@apollo/client';
 import { client } from '../lib/apollo';
 
-const USER_QUERY = gql`
+export const USER_QUERY = gql`
   {
     user {
       id
-      firstName
-      lastName
       fullName
-      phoneNumber
-      organisation {
-        name
-      }
     }
   }
 `;
