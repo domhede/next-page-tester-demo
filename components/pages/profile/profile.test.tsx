@@ -1,8 +1,12 @@
 /* eslint-disable react/display-name  */
 import { getPage } from 'next-page-tester';
 import { MockedProvider } from '@apollo/client/testing';
-import { screen, waitFor } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { USER_QUERY } from '../../../pages/profile';
+
+/**
+ * @jest-environment node
+ */
 
 const mocks = [
   {
@@ -35,6 +39,6 @@ describe('Profile page', () => {
     });
 
     render();
-    await waitFor(() => expect(screen.queryByText('Art Vandalay')).toBeTruthy());
+    await screen.queryByText('Art Vandalay');
   });
 });

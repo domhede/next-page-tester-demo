@@ -6,7 +6,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Gravity</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,6 +21,6 @@ export default function Home() {
       </main>
 
       <footer></footer>
-    </div>
+    </>
   );
 }

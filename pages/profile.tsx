@@ -21,16 +21,14 @@ export default function Profile({ data }: ProfileProps) {
     user: { fullName },
   } = data;
   return (
-    <div>
-      <main>
-        <Box margin="60px" height="100vh">
-          <HStack spacing="10">
-            <Circle size="138px" bg="yellow" />
-            <Heading>{fullName}</Heading>
-          </HStack>
-        </Box>
-      </main>
-    </div>
+    <main>
+      <Box margin="60px" height="100vh">
+        <HStack spacing="10">
+          <Circle size="138px" bg="yellow" />
+          <Heading>{fullName}</Heading>
+        </HStack>
+      </Box>
+    </main>
   );
 }
 
